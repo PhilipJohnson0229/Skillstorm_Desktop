@@ -1,0 +1,12 @@
+//setTimeout takes in two param
+
+/*setTimeout(()=>{
+    console.log('time out');
+}, 1000);*/
+
+console.log('Finished');
+
+//setInterval is true but it will return a function each iteration
+let count = setInterval(()=>{
+    console.log('time out');
+}, 300);

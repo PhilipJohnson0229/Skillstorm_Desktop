@@ -1,0 +1,29 @@
+let fruits = ['apple', 'cherry', 'mango'];
+
+//add an item to the array
+fruits.push('pears');
+
+console.log(fruits);
+
+let lessFruits = fruits;
+
+lessFruits.pop();
+
+console.log(lessFruits);
+//remove 
+
+const person = 
+{
+    fullName:
+    {
+        firstName: 'sally',
+        lastName: 'smoth'
+    },
+
+    age: 10,
+    favColor: 'Red',
+    hobbies:['skiing', 'hiking', 'boxing']
+
+}
+
+let{age, hobbies, favColor} = person

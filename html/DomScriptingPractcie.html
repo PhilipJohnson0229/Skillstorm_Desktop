@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            margin: 10;
+            border:  1px solid black;
+            background-color: blue;
+            color: white;
+            border: 1em;
+            width: 100px;
+            height: 100px;
+        }
+
+        .testContainer
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+    <script>
+      let count = 0;
+      function printMe ()
+      {
+        count ++;
+        const countDiv = document.getElementById('count-div');  
+
+        countDiv.innerText = `Current count : ${count}`;
+      }
+
+      function handleSearch()
+      {
+        const searchBar = document.getElementById('searchBar');
+
+        console.log(`The worthless mortals are praying to their gods. They are begging for ${searchBar.value}.`);
+      }
+
+      //creating a new element dynamically
+      function createNewBox()
+      {
+        const newBox = document.createElement('div');
+
+        //we can set the attributes of the new element through js
+        newBox.setAttribute('class', 'box');
+
+        //now that we have the box created we need to insert it into the container object
+        const boxContainer = document.getElementById('boxContainer');
+
+        boxContainer.appendChild(newBox);
+      }
+    </script>
+</head>
+<body>
+    <div id="count-div">Count : </div>
+    <button  onclick="printMe();">Click me!</button>
+
+    <input type="text" onkeydown="handleSearch();" id="searchBar">
+
+    <button onclick="createNewBox();">Create new box</button>
+    <div class="testContainer" id="boxContainer">
+            <div class="box"></div>
+            
+    </div>
+</body>
+</html>

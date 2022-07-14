@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+C:\Skillstorm\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+3219171717.index
+54452146.index
+89686527.index
+2090482743.index
+1821155069.index
+1330128816.index
+213995908.index
+3803789452.index
+1123564444.index
+2750716043.index
+2551743217.index
+1240675072.index
+620171812.index
+1865797976.index
