@@ -16,7 +16,7 @@ import com.skillstorm.model.Employee;
 
 
 //controller glues model to the view
-//@WebServlet(urlPatterns = "/my-servlet")
+@WebServlet(urlPatterns = "/my-servlet")
 public class ExpenseServlet extends HttpServlet { // IS-A servlet(polymorphism)
 
 	//INSTANCE VARIABLES ARE NOT THREAD SAFE
@@ -38,6 +38,11 @@ public class ExpenseServlet extends HttpServlet { // IS-A servlet(polymorphism)
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		System.out.println("Im in java");
+		resp.getWriter().append("Hello there dude");
+		/*FINAL CODE
 		//the firsgt time the user gets on we will store a cookie to maintain state
 		Cookie cookie = new Cookie("dan","pickles");
 		//adding the cookie to the response
@@ -69,19 +74,23 @@ public class ExpenseServlet extends HttpServlet { // IS-A servlet(polymorphism)
 		}
 		
 		//we will have the objectMapper print out the JSONobjects into java string objects
-		resp.getWriter().println(json);
+		resp.getWriter().println(json);*/
 	}
 	
 	//POST 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		
+		//FINAL CODE
 		//print the input from the form with the postTest param
 		//System.out.println(req.getParameter("postTest"));
 		
 		//redirect to another page
 		//resp.sendRedirect("response.html");
 		//req.getRequestDispatcher("response.html").forward(req, resp); // writes to the response body
-		
+		/*
 		//lets get our cookies
 		//this will retrun an array of cookies
 		if(req.getCookies() != null) {
@@ -93,9 +102,7 @@ public class ExpenseServlet extends HttpServlet { // IS-A servlet(polymorphism)
 				}
 			}
 		}
-		
-	
-		
+
 		//http GET request body will send json for this servlet to parse.  we need the line below
 		InputStream requestBody = req.getInputStream();
 		
@@ -112,7 +119,7 @@ public class ExpenseServlet extends HttpServlet { // IS-A servlet(polymorphism)
 		//so amazingly java objects are serializable going across the wire
 		req.getSession().setAttribute("addedItem", employee);
 		
-		resp.setStatus(201);
+		resp.setStatus(201);*/
 	}
 	
 	//UPDATE

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  *  this is good to know in case we DO have multiple servlets
  *  urlPatterns ="/*" means that we will take in every url
  *  */
-@WebServlet(urlPatterns ="/*", loadOnStartup = 1)
+//@WebServlet(urlPatterns ="/*", loadOnStartup = 1)
 public class DispatcherServlet extends HttpServlet{
 
 	@Override
